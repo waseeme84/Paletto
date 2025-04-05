@@ -9,7 +9,7 @@
 }
 
 header {
-	background-color: #0a1120;
+	background-color: #000016;
 	width: 100%;
 	/*To keep the header visible when moving the page*/ 
 	position: fixed;
@@ -23,15 +23,15 @@ header {
 }
 .logo{
 	text-decoration: none; /*to remove the line under text */
-	color: #3a6cf4;
+	color: #fff;
 	text-transform: uppercase;
-	font-weight: 300;
-	font-size: 1.3em;
+	font-weight: 500;
+	font-size: 1.1em;
 
 
 }
 .navigation a {
-	color: #3a6cf4;
+	color: #fff;
 	text-decoration: none;
 	font-size: 1.1em;
 	font-weight: 500;
@@ -123,7 +123,7 @@ section{
 .title {
 	display: flex;
 	justify-content: center;
-	color: #990000;
+	color: #fff;
 	font-size: 2.2em;
 	font-weight: 800;
 	margin-bottom: 30px;
@@ -159,8 +159,8 @@ section{
 	transform: scale(1.1);
 }
 .icon{
-	color: #990000;
-	font-size: 5em;
+	color: #ff9002;
+	font-size: 3em;
 	text-align: center;
 
 }
