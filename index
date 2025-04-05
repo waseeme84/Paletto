@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="shortcut icon" href="logo ico.ico" type="image/x-icon" />
+    <title>Waseem Esmail</title>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Welcom to my website</a>
+        <nav class="navigation">
+            <a href="#About me">About me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    
+
+    <section class="main">
+        
+        <div>
+            <h2><img class="main-img" src="images/a.jpg" ><br><span>Waseem Esmail</span></h2>
+             <!-- <h3>Painter <br> customer service agent </h3 -->
+            <a href="#Projects" class="main-btn">view my work</a>
+            <div class="social-icon">
+                <a href="https://www.behance.net/waseemesmail"target="blank"><i class="fa-brands fa-behance"></i></a>
+                <a href="https://www.facebook.com/Waseemeesmail" target="blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/waseem_esmail/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/waseemesmail/" target="blank"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://linkedin.com/in/mohamad-waseem-esmail-620796b1//" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+
+                
+            
+        </div>
+    </section>
+
+
+<!--About me-->
+    <section class="cards" id="About me">
+        <h2 class="title">About me</h2>
+        <div class="content">
+            <!--draw-->
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <div class="info">
+                   <!--h3>draw</h3-->
+                   <p>Experienced graphic designer adept at crafting a wide array of materials, encompassing 
+logos, advertisements, and digital content. Proficient in utilizing design software like Adobe 
+Photoshop and Illustrator to produce compelling visuals. Possess robust communication 
+and writing abilities, enhancing collaboration and client interactions. Enthusiastic about 
+producing captivating and impactful content tailored to meet client requirements </p>
+                </div>
+            </div>
+            <!--video editing-->
+            <!--div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="info">
+                   <h3>Editing videos</h3>
+                   <p>Design motion-graphic, montage   </p>
+                </div>
+            </div-->
+            <!--Social Media Marketing-->
+            <!--div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div class="info">
+                   <h3>Social Media Marketing</h3>
+                   <p>Create engaging text, image and video content <br> Research audience preferences and discover current trends <br> Arguments, Communicate with clients and target audience and respond to various inquiries</p>
+                </div>
+            </div-->
+            <!--graphic design-->
+             <!--div class="card">
+                <div class="icon">
+                   <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="info">
+                   <h3>Design</h3>
+                   <p>graphic design for social media ,creat logos,   </p>
+                </div>
+            </div>
+        </div-->
+    </section>
+<hr>
+<!--project cards-->
+    <section class="Projects" id="Projects">
+        <h2 class="title">Projects</h2>
+<hr>
+ <!--1-->
+ <!--social media post-->
+          <h2 class="title1">social media post</h2>
+        <div class="content">
+            <!--card p1-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/ع1.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for short film</span>
+                    <a href="https://m.imdb.com/title/tt28451879/?ref_=nm_ov_bio_lk" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+             <!--card p2-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/b1.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for short film</span>
+                    <a href="https://m.imdb.com/title/tt28451879/?ref_=nm_ov_bio_lk" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+             <!--card remedial-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/remidiall-post.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for remedialjob page</span>
+                    <a href="https://www.instagram.com/p/C0RZ0MYrRxK/?hl=ar" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card1-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/cs85 - 2.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media manipulation design for Changan CS85</span>
+                    <a href="https://www.behance.net/gallery/173906015/Social-media-manipulation-design-for-Changan-CS85" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card2-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/2-01-01.png">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>social media ads for art Gallery</span>
+                </strong>
+                </div>
+            </div>
+            <!--card3-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/social media ads for Achyaa store.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>social media ads for Achyaa store</span>
+                    <a href="https://www.behance.net/gallery/166221233/social-media-ads-for-Achyaa-store" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+              <!--card4-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/photography course.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>social media ads for Photography course</span>
+                </strong>
+                </div>
+            </div>
+            <!--card5-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/pizza social media ads.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>social media ads for delivary service</span>
+                    <a href="https://www.behance.net/gallery/165161013/pizza-social-media-ads" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+              <!--card6-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/MWESTORE hide line.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media design for an e-commerce platform</span>
+                </strong>
+                </div>
+            </div>
+            <!--card7-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Tasty burger social media post.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Tasty burger social media post</span>
+                    <a href="https://www.behance.net/gallery/162561135/Tasty-burger-social-media-post" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card8-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Advertisement for headphones.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Advertisement for headphones</span>
+                    <a href="https://www.behance.net/gallery/161371217/Advertisement-for-headphones" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card9-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Social media post for a monday night party.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for a monday night party</span>
+                    <a href="https://www.behance.net/gallery/161370851/Social-media-post-for-a-monday-night-party" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card10-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Social media post design for a shopping page.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for a shopping page</span>
+                    <a href="https://www.behance.net/gallery/160996915/social-media-post-for-clothes-store" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card11-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Untitled-2 copy.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for acting course</span>
+                </strong>
+                </div>
+            </div>
+            <!--card12-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/11.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for Mtbazar</span>
+                    <!--a href="https://www.behance.net/gallery/160996915/social-media-post-for-clothes-store" class="more-details">more details</a-->
+                </strong>
+                </div>
+            </div>
+            <!--card13-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/3 arabic3.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for Mtbazar</span>
+                    <!--a href="https://www.behance.net/gallery/160996915/social-media-post-for-clothes-store" class="more-details">more details</a-->
+                </strong>
+                </div>
+            </div>
+            <!--card14-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/222.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for Mtbazar</span>
+                    <!--a href="https://www.behance.net/gallery/160996915/social-media-post-for-clothes-store" class="more-details">more details</a-->
+                </strong>
+                </div>
+            </div>
+            <!--card15-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/44.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Social Media Designs</p>
+                <strong class="project-title">
+                    <span>Social media post for Mtbazar</span>
+                    <!--a href="https://www.behance.net/gallery/160996915/social-media-post-for-clothes-store" class="more-details">more details</a-->
+                </strong>
+                </div>
+            </div>
+      </div>
+<hr>
+<!--2-->
+<!--logos-->
+        <h2 class="title1">logos</h2>
+    <div class="content">
+            <!--carda1-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Achyaa logo1.png">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">logo designe</p>
+                <strong class="project-title">
+                    <span>Achyaa store logo</span>
+                    <a href="https://www.behance.net/gallery/165374727/Achyaa-store-logo" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--carda2-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/logo for nice day resturant.png">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">logo designe</p>
+                <strong class="project-title">
+                    <span>logo FOR NICD DAY RESTURANT</span>
+                    <a href="https://www.behance.net/gallery/165695551/BRANDING-FOR-NICD-DAY-RESTURANT" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+             <!--carda3-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Equability logo.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">logo designe</p>
+                <strong class="project-title">
+                    <span>Equability logo</span>
+                    <a href="https://www.behance.net/gallery/160096229/Equability-logo" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--carda4-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/logo for Behavior modification clinic.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">logo designe</p>
+                <strong class="project-title">
+                    <span>logo for Behavior modification clinic</span>
+                    <a href="https://www.behance.net/gallery/160095959/logo-for-Behavior-modification-clinic" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--carda5-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Logo for a networking company called (Ant).jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">logo designe</p>
+                <strong class="project-title">
+                    <span>Logo for a networking company called (Ant)</span>
+                    <a href="https://www.behance.net/gallery/160347121/Logo-for-a-networking-company-called-%28Ant%29" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+     </div>
+        
+<hr>
+<!--3-->
+<!--Film poster-->
+        <h2 class="title1">Film poster</h2>
+    <div class="content">
+            <!--carda1-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/I Could Have Lived Because Of You - poster 1.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Film poster</p>
+                <strong class="project-title">
+                    <span>I Could Have Lived Because Of You <br> poster 1</span>
+                    <a href="https://m.imdb.com/title/tt28451879/?ref_=nm_ov_bio_lk" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--carda2-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Best Actor - film poster.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Film poster</p>
+                <strong class="project-title">
+                    <span>Best Actor</span>
+                    <a href="" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+             <!--carda3-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/I Could Have Lived Because Of You - poster 2.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Film poster</p>
+                <strong class="project-title">
+                    <span>I Could Have Lived Because Of You <br> poster 2</span>
+                    <a href="https://m.imdb.com/title/tt28451879/?ref_=nm_ov_bio_lk" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+     </div>
+
+<hr>
+<!--4-->
+<!--Photo manipulation-->
+        <h2 class="title1">Photo manipulation</h2>
+    <div class="content">
+            <!--carda1-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/waseem car.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Photo manipulation</p>
+                <strong class="project-title">
+                    <span>Manipulation for My lovely car ''beetle van ''</span>
+                    <a href="https://www.behance.net/gallery/175337385/Manipulation-for-My-lovely-car-beetle-van-" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--carda2-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/call of duty.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Photo manipulation</p>
+                <strong class="project-title">
+                    <span>Manipulation design inspired by the Call of Duty game</span>
+                    <a href="https://www.behance.net/gallery/168415789/Manipulation-design-inspired-by-the-Call-of-Duty-game" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+             <!--carda3-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/mustang.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Photo manipulation</p>
+                <strong class="project-title">
+                    <span>Manipulating a fast car in a jungle road</span>
+                    <a href="https://www.behance.net/gallery/167823303/Manipulating-a-fast-car-in-a-jungle-road" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+     </div>
+        
+<!--5-->
+  <hr>
+<!--pencil and digital art-->
+        <h2 class="title1">pencil and digital art</h2>
+    <div class="content">
+            <!--card7-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/sofia-vergara1.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Digital art</p>
+                <strong class="project-title">
+                    <span>Sofia vergara</span>
+                    <a href="https://www.behance.net/gallery/143183465/Sofia-vergara" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card8-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/محمد-خير-الجراح1.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Digital art</p>
+                <strong class="project-title">
+                    <span>SYRIAN ACTOR : MOHAMAD KHAIR ALJARAAH</span>
+                    <a href="https://www.behance.net/gallery/141609661/SYRIAN-ACTOR-MOHAMAD-KHAIR-ALJARAAH" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card9-->
+             <div class="project-card">
+                <div class="project-image">
+                  <img src="images/waseem-vector2.png">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Digital art</p>
+                <strong class="project-title">
+                    <span>My Picture</span>
+                    <a href="https://www.behance.net/gallery/142728593/my-photo" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card10-->
+             <div class="project-card">
+                <div class="project-image">
+                  <img src="images/shaker .jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Drawing by mobile phone</p>
+                <strong class="project-title">
+                    <span>Pictur for freind</span>
+                    <a href="https://www.instagram.com/p/CHTcUOBhScM/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card11-->
+             <div class="project-card">
+                <div class="project-image">
+                  <img src="images/nice girl.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Watercolor drawing</p>
+                <strong class="project-title">
+                    <span>Wall drawing</span>
+                    <a href="https://www.instagram.com/p/BrCkVnLFVQl/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card12-->
+             <div class="project-card">
+                <div class="project-image">
+                  <img src="images/birde.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Pencil drawing</p>
+                <strong class="project-title">
+                    <span>Beautiful bride</span>
+                    <a href="https://www.instagram.com/p/Bck0uoMlrtf/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card13-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/old man.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Pencil drawing</p>
+                <strong class="project-title">
+                    <span>Old man picture</span>
+                    <a href="https://www.instagram.com/p/BZmIlNFFs7F/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card14-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/cute baby.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Pencil drawing</p>
+                <strong class="project-title">
+                    <span>cute baby picture</span>
+                    <a href="https://www.instagram.com/p/BaHnO3KlV3F/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+               <!--card15-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/cute baby 2.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Pencil drawing</p>
+                <strong class="project-title">
+                    <span>cute baby 2 picture</span>
+                    <a href="https://www.instagram.com/p/B1HL_6QBILq/" class="more-details">more details</a>
+                </strong>
+                </div>
+            </div>
+    </div>
+        
+<!--6-->
+<hr>
+<!--vectors for motion graphic-->
+        <h2 class="title1">vectors for motion graphic</h2>
+    <div class="content">
+            <!--card14-->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/vector character man 3.jpg">  
+                </div>
+                <div class="project-info">
+                    <p class="project-category">character for motion-graphic</p>
+                    <strong class="project-title">
+                        <span>vector for motion graphic</span>
+                        <a href="https://www.vectorstock.com/royalty-free-vector/character-man-2-vector-38669660?utm_source=Pinterest&utm_medium=VectorStock+Social+Share&utm_campaign=Vector+Social+Share&utm_content=Character+man+2" class="more-details" target="blank">more details</a>
+                    </strong>
+                </div>
+            </div>
+            <!--card15-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/vector character man 2.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">character for motion-graphic</p>
+                <strong class="project-title">
+                    <span>Character man vector image</span>
+                    <a href="https://www.vectorstock.com/royalty-free-vector/character-man-vector-38669589" class="more-details" target="blank">more details</a>
+                </strong>
+                </div>
+            </div>
+            <!--card16-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/vector character man 4.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">character for motion-graphic</p>
+                <strong class="project-title">
+                    <span>Character man 3 vector image</span>
+                    <a href="https://www.vectorstock.com/royalty-free-vector/character-man-3-vector-38669680" class="more-details" target="blank">more details</a>
+                </strong>
+                </div>
+            </div>  
+            <!--card17-->
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="images/Pilot-sweat.jpg">  
+                </div>
+                <div class="project-info">
+                <p class="project-category">Design</p>
+                <strong class="project-title">
+                    <span>pilot uniform</span>
+                    <a href="https://www.vectorstock.com/royalty-free-vector/character-man-3-vector-38669680" class="more-details" target="blank">more details</a>
+                </strong>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+    
+<hr>  
+<!--contact-->
+    <section class="cards contact" id="Contact">
+        <h2 class="title">Let's work thogether</h2>
+         <div class="content">
+            < <div class="card">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                   <h3>PHONE</h3>
+                    <a>+963949388720 / +9647508767189</a>
+                </div>
+                
+            </div>>
+            <div class="card" id="card-e">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                   <h3>EMAIL</h3>
+                   <p id="email-text">waseemesmael@live.com</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @<span>Waseem esmail</span></p>
+        <div class="social-icon">
+                <a href="https://www.behance.net/waseemesmail"target="blank"><i class="fa-brands fa-behance"></i></a>
+                <a href="https://www.facebook.com/Waseemeesmail" target="blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/waseem_esmail/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/waseemesmail/" target="blank"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://linkedin.com/in/mohamad-waseem-esmail-620796b1//" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                
+            </div>
+        
+    </footer>   
+
+
+</body>
+</html>
