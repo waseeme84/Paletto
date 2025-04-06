@@ -19,7 +19,7 @@ body {
 .nav-left {
   font-weight: bold;
   font-size: 1.5rem;
-  color: Linar-gradient (45deg,#a259ff,#ff6a3d)
+  color: linar-gradient (45deg ,#a259ff, #ff6a3d )
 }
 .nav-right {
   list-style: none;
