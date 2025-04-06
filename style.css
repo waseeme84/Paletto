@@ -5,7 +5,10 @@ body {
   background-size: cover;
   color: #2e2e2e;
 }
-
+.logo {
+  heigh:40px;
+  width :auto;
+}
 .navbar {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem 2rem;
