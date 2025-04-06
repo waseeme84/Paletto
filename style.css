@@ -6,8 +6,8 @@ body {
   color: #2e2e2e;
 }
 .logo {
-  heigh:40px;
-  width :auto;
+  heigh: 5px;
+  width: auto;
 }
 .navbar {
   background-color: rgba(255, 255, 255, 0.9);
@@ -137,7 +137,7 @@ button {
 .service img {
   width: 80%;
   height:80%;
-  object-fit : cover;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
