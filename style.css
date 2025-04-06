@@ -135,8 +135,8 @@ button {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .service img {
-  width: 80%;
-  height:80%;
+  width: 50%;
+  height:50%;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.5rem;
