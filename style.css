@@ -6,7 +6,7 @@ body {
   color: #2e2e2e;
 }
 .logo {
-  heigh: 40px;
+  heigh: 50px;
   width: auto;
 }
 .navbar {
@@ -135,8 +135,9 @@ button {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .service img {
-  width: 50%;
   height:50%;
+  min-height: 14em;
+	width: 23em;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.5rem;
