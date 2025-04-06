@@ -136,6 +136,36 @@ button {
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #333;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  .nav-right.show {
+    display: flex;
+  }
+}
 
 @media (max-width: 768px) {
   .nav-right {
