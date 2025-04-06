@@ -1,60 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paletto | Event Management</title>
+  <title>Paletto | Event Management Team</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <ul>
-      <li><a href="#Who We Are?">Who We Are?</a></li>
+    <div class="nav-left">Paletto</div>
+    <ul class="nav-right">
+      <li><a href="#Who We Are ?">Who We Are ?</a></li>
       <li><a href="#Our Services">Our Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#Contact Us">Contact Us</a></li>
     </ul>
   </nav>
 
   <header>
     <h1 id="typed-text"></h1>
-    <p>Towards unforgettable moments, we create our own events.</p>
-    <a class="cta-button" href="#Contact Us">}Contact Us</a>
+    <p>We craft unforgettable moments with our unique event designs.</p>
+    <a class="cta-button" href="#contact">Contact Us</a>
   </header>
 
-  <section id="Who We Are?">
-    <h2>Who We Are?</h2>
-    <p>Because events should have an impact and add color and joy to people's lives,
-    our small team specializes in organizing various events with professionalism.
-    12 different colors work perfectly and exceptionally to create your special special event. 
-    Don't hesitate to contact us so we can design an unforgettable event together.</p>
+  <section id="Who We Are ?">
+    <h2>Who We Are ?</h2>
+    <p>Because events should have an impact and add color and joy to people's lives, our small team specializes in organizing various events with professionalism. 12 different colors work perfectly and exceptionally to create your special special event. Don't hesitate to contact us so we can design an unforgettable event together.
+</p>
   </section>
 
   <section id="Our Services">
     <h2>Our Services</h2>
-    <ul>
-      <li> public events </li>
-      <li> private events</li>
-    </ul>
+    <div class="Our Services">
+      <div class="Our Services">
+        <img src="https://via.placeholder.com/150" alt="Event Planning" />
+        <p>Event Planning & Coordination</p>
+      </div>
+      <div class="Our Services">
+        <img src="https://via.placeholder.com/150" alt="Decor Design" />
+        <p>Creative Decoration Design</p>
+      </div>
+      <div class="Our Services">
+        <img src="https://via.placeholder.com/150" alt="Scheduling" />
+        <p>Event Scheduling & Management</p>
+      </div>
+      <div class="Our Services">
+        <img src="https://via.placeholder.com/150" alt="Photography" />
+        <p>Media Coverage & Photography</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Some of our past events (to be added soon).</p>
   </section>
 
   <section id="Contact Us">
     <h2>Contact Us</h2>
     <form action="mailto:paletto.event@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Message"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message"></textarea>
       <button type="submit">Send</button>
     </form>
+    <div class="contact-info">
+      <p>Email: info@paletto.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>WhatsApp: +123 456 7890</p>
+    </div>
   </section>
 
-  <button onclick="topFunction()" id="topBtn" title="top">↑</button>
+  <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
 
   <footer>
-    &copy; All rights reserved - 2025 Paletto Team
+    &copy; 2025 Paletto Team - All rights reserved
   </footer>
 
   <script>
-    const text = "Towards unforgettable moments, we create our own events";
+    const text = "We create unforgettable events with the Paletto touch";
     let i = 0;
     function typeEffect() {
       if (i < text.length) {
