@@ -19,7 +19,9 @@ body {
 .nav-left {
   font-weight: bold;
   font-size: 1.5rem;
-  color: linar-gradient (45deg ,#a259ff, #ff6a3d )
+  background: linear-gradient(45deg, #a259ff, #ff6a3d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .nav-right {
   list-style: none;
@@ -133,4 +135,31 @@ button {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .nav-left {
+    font-size: 1.2rem;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+  form {
+    width: 90%;
+  }
 }
