@@ -145,7 +145,6 @@ button {
   gap: 1.5rem;
   justify-content: center;
   margin-top: 1rem;
-  align-items: center;
 }
 
 .services {
@@ -162,6 +161,7 @@ button {
   width: 400px;
   height: 300px;
   object-fit: cover;
+  items-align: center;
   border-radius: 8px;
   display: block;
   margin: 0 auto 1rem;
