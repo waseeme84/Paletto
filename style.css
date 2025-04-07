@@ -119,7 +119,7 @@ button {
   cursor: pointer;
 }
 
-.services {
+.OurServices {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -180,7 +180,7 @@ button {
     align-items: flex-start;
     gap: 1rem;
   }
-  .services {
+  .OurServices {
     flex-direction: column;
     align-items: center;
   }
