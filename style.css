@@ -145,6 +145,7 @@ button {
   gap: 1.5rem;
   justify-content: center;
   margin-top: 1rem;
+  align-items: center;
 }
 
 .services {
