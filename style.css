@@ -9,8 +9,11 @@ body {
   heigh: 100px;
   width: auto;
 }
-p {
+.about {
   text-align: justify;
+}
+p {
+  text-align :center
 }
 
 .navbar {
