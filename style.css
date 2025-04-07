@@ -51,13 +51,16 @@ p {
   color: #333;
   font-weight: bold;
 }
-
 header {
-  background: rgba(162, 89, 255, 0.8);
+  background: linear-gradient(45deg, rgba(162, 89, 255, 0.85), rgba(255, 106, 61, 0.85));
   color: white;
   padding: 2rem;
   text-align: center;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل ناعم أسفل الهيدر */
+  backdrop-filter: blur(4px); /* تأثير زجاجي خفيف */
 }
+
 header h1 {
   margin: 0;
   font-size: 2.5rem;
