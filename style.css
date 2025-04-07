@@ -142,9 +142,11 @@ button {
 .OurServices {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;     
   gap: 1.5rem;
-  items-align: center;
   margin-top: 1rem;
+}
 }
 
 .services {
@@ -152,7 +154,6 @@ button {
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  items-align: center;
   width: 500px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
