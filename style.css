@@ -10,7 +10,13 @@ body {
   width: auto;
 }
 .about {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about p {
   text-align: justify;
+  line-height: 1.6;
 }
 p {
   text-align :center
