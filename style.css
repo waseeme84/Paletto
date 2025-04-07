@@ -50,7 +50,11 @@ header h1 {
   font-size: 2.5rem;
   text-align: center;
 }
-
+header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
 section {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 3rem 2rem;
@@ -136,9 +140,9 @@ button {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .service img {
-  width: 150px;
-  height: 150px;
-  min-height: 14em;
+  width: 100px;
+  height: 100px;
+  min-height: 10em;
   object-fit: cover;
   border-radius: 8px;
   display: block;
