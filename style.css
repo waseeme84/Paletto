@@ -5,9 +5,6 @@ body {
   background-size: cover;
   color: #2e2e2e;
 }
-.logo .st0 {
-  display: block !important;
-}
 .logo {
   heigh: 50px;
   width: auto;
