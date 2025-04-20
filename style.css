@@ -39,6 +39,9 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.nav-left .logo {
+  height: 55px;
+}
 .nav-right {
   list-style: none;
   display: flex;
