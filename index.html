@@ -47,14 +47,37 @@
 
   <section id="OurServices">
     <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <img src="image/paletto event public.jpg" alt="Public event" />
-        <p>Public event</p>
+    <div class="services-container">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="image/paletto event public.jpg" alt="Public event" />
+        </div>
+        <div class="service-content">
+          <h3>Public Events</h3>
+          <p>We organize large-scale public events including festivals, exhibitions, and corporate gatherings with professional planning and execution.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Festival Organization</li>
+            <li><i class="fas fa-check-circle"></i> Exhibition Management</li>
+            <li><i class="fas fa-check-circle"></i> Corporate Gatherings</li>
+            <li><i class="fas fa-check-circle"></i> Large Scale Planning</li>
+          </ul>
+        </div>
       </div>
-      <div class="service">
-        <img src="image/paletto event wedding.jpg" alt="Private event" />
-        <p>Private event</p>
+      
+      <div class="service-card">
+        <div class="service-image">
+          <img src="image/paletto event wedding.jpg" alt="Private event" />
+        </div>
+        <div class="service-content">
+          <h3>Private Events</h3>
+          <p>We create unforgettable private events including weddings, birthdays, and family celebrations with personalized attention to detail.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Wedding Planning</li>
+            <li><i class="fas fa-check-circle"></i> Birthday Celebrations</li>
+            <li><i class="fas fa-check-circle"></i> Family Events</li>
+            <li><i class="fas fa-check-circle"></i> Personalized Themes</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -102,7 +125,7 @@
       
       <!-- زر زيارة الإنستغرام -->
       <div class="instagram-link">
-        <a href="https://www.instagram.com/paletto.event/" target="_blank" class="instagram-btn">
+        <a href="https://www.instagram.com/waseem_esmail/" target="_blank" class="instagram-btn">
           <i class="fab fa-instagram"></i> Visit our Instagram
         </a>
         <p class="instagram-note">Follow us for more updates and event photos</p>
@@ -121,200 +144,8 @@
   </div>
 
   <footer>
-    &copy; Copyright 2026 Paletto Event | Powered by Paletto Event Team
+    &copy; Copyright 2025 Paletto Event | Powered by Paletto Event Team
   </footer>
 
   <script>
-    // تأثير الكتابة
-    const text = "When Every Detail Pops";
-    let i = 0;
-    function typeEffect() {
-      if (i < text.length) {
-        document.getElementById("typed-text").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 80);
-      }
-    }
-    
-    // زر العودة للأعلى
-    let topButton = document.getElementById("topBtn");
-    window.onscroll = () => {
-      topButton.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-    
-    function topFunction() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    
-    // القائمة المتنقلة
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
-    }
-    
-    // كروسال الصور - الكود
-    document.addEventListener('DOMContentLoaded', function() {
-      // بيانات الصور
-      const images = [
-        { src: "image/bookfair (1).jpg", title: "Bookfair Event", description: "Opening ceremony of the book fair" },
-        { src: "image/bookfair (2).jpg", title: "Book Exhibition", description: "Visitors exploring book stalls" },
-        { src: "image/bookfair (3).jpg", title: "Cultural Event", description: "Author signing session" },
-        { src: "image/bookfair (4).jpg", title: "Book Launch", description: "New book releases showcase" },
-        { src: "image/bookfair (5).jpg", title: "Reading Area", description: "Comfortable reading space for visitors" },
-        { src: "image/bookfair (6).jpg", title: "Children's Corner", description: "Kids enjoying interactive activities" },
-        { src: "image/bookfair (7).jpg", title: "Art Exhibition", description: "Artwork inspired by literature" },
-        { src: "image/bookfair (8).jpg", title: "Discussion Panel", description: "Expert panel on contemporary literature" },
-        { src: "image/bookfair (9).jpg", title: "Closing Ceremony", description: "Award distribution and closing remarks" }
-      ];
-      
-      // عناصر DOM
-      const carousel = document.getElementById('carousel');
-      const indicators = document.getElementById('indicators');
-      const thumbnails = document.getElementById('thumbnails');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const zoomBtn = document.getElementById('zoomBtn');
-      const modal = document.getElementById('imageModal');
-      const closeModal = document.getElementById('closeModal');
-      const modalImage = document.getElementById('modalImage');
-      
-      let currentSlide = 0;
-      let autoPlayInterval;
-      
-      // إنشاء شرائح الكروسال
-      function createSlides() {
-        carousel.innerHTML = '';
-        indicators.innerHTML = '';
-        thumbnails.innerHTML = '';
-        
-        images.forEach((image, index) => {
-          // إنشاء الشرائح
-          const slide = document.createElement('div');
-          slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
-          slide.innerHTML = `
-            <img src="${image.src}" alt="${image.title}">
-            <div class="slide-caption">
-              <h3>${image.title}</h3>
-              <p>${image.description}</p>
-            </div>
-          `;
-          carousel.appendChild(slide);
-          
-          // إنشاء مؤشرات
-          const indicator = document.createElement('div');
-          indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
-          indicator.dataset.index = index;
-          indicator.addEventListener('click', () => goToSlide(index));
-          indicators.appendChild(indicator);
-          
-          // إنشاء الصور المصغرة
-          const thumbnail = document.createElement('div');
-          thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
-          thumbnail.dataset.index = index;
-          thumbnail.innerHTML = `<img src="${image.src}" alt="${image.title}">`;
-          thumbnail.addEventListener('click', () => goToSlide(index));
-          thumbnails.appendChild(thumbnail);
-        });
-      }
-      
-      // الانتقال إلى شريحة محددة
-      function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
-        stopAutoPlay();
-      }
-      
-      // تحديث الكروسال
-      function updateCarousel() {
-        // تحديث موضع الكروسال
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // تحديث المؤشرات
-        document.querySelectorAll('.indicator').forEach((indicator, index) => {
-          indicator.classList.toggle('active', index === currentSlide);
-        });
-        
-        // تحديث الصور المصغرة
-        document.querySelectorAll('.thumbnail').forEach((thumbnail, index) => {
-          thumbnail.classList.toggle('active', index === currentSlide);
-        });
-      }
-      
-      // الشريحة التالية
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % images.length;
-        updateCarousel();
-      }
-      
-      // الشريحة السابقة
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + images.length) % images.length;
-        updateCarousel();
-      }
-      
-      // تكبير الصورة الحالية
-      function zoomImage() {
-        modalImage.src = images[currentSlide].src;
-        modal.style.display = 'flex';
-      }
-      
-      // بدء التشغيل التلقائي
-      function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 4000);
-      }
-      
-      // إيقاف التشغيل التلقائي
-      function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-      }
-      
-      // تهيئة الكروسال
-      function initCarousel() {
-        createSlides();
-        
-        // إضافة مستمعي الأحداث
-        prevBtn.addEventListener('click', () => {
-          prevSlide();
-          stopAutoPlay();
-        });
-        
-        nextBtn.addEventListener('click', () => {
-          nextSlide();
-          stopAutoPlay();
-        });
-        
-        zoomBtn.addEventListener('click', zoomImage);
-        
-        closeModal.addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-        
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-          }
-        });
-        
-        // إضافة إمكانية التكبير للصور المصغرة
-        document.querySelectorAll('.thumbnail img').forEach((img, index) => {
-          img.addEventListener('click', () => {
-            modalImage.src = images[index].src;
-            modal.style.display = 'flex';
-          });
-        });
-        
-        // بدء التشغيل التلقائي
-        startAutoPlay();
-        
-        // إيقاف التشغيل التلقائي عند التفاعل مع الكروسال
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
-      }
-      
-      // تشغيل تهيئة الكروسال
-      initCarousel();
-    });
-    
-    window.onload = typeEffect;
-  </script>
-</body>
-</html>
+   
