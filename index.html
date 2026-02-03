@@ -62,7 +62,7 @@
   <section id="gallery">
     <h2>Gallery</h2>
     
-    <!-- كروسال الصور -->
+    <!-- كروسال الصور فقط -->
     <div class="carousel-container">
       <div class="carousel" id="carousel">
         <!-- سيتم إضافة الشرائح بواسطة JavaScript -->
@@ -91,20 +91,6 @@
         <!-- سيتم إضافة الصور المصغرة بواسطة JavaScript -->
       </div>
     </div>
-    
-    <!-- معرض الصور الأصلي -->
-    <div class="gallery-grid">
-      <img src="image/bookfair (1).jpg" alt="Bookfair" />
-      <img src="image/bookfair (2).jpg" alt="Bookfair" />
-      <img src="image/bookfair (3).jpg" alt="Bookfair" />
-      <img src="image/bookfair (4).jpg" alt="Bookfair" />
-      <img src="image/bookfair (5).jpg" alt="Bookfair" />
-      <img src="image/bookfair (6).jpg" alt="Bookfair" />
-      <img src="image/bookfair (7).jpg" alt="Bookfair" />
-      <img src="image/bookfair (8).jpg" alt="Bookfair" />
-      <img src="image/bookfair (9).jpg" alt="Bookfair" />
-      <p class="gallery-caption">Bookfair</p>
-    </div>
   </section>
 
   <section id="ContactUs">
@@ -116,7 +102,7 @@
       
       <!-- زر زيارة الإنستغرام -->
       <div class="instagram-link">
-        <a href="https://www.instagram.com/waseem_esmail/" target="_blank" class="instagram-btn">
+        <a href="https://www.instagram.com/paletto.event/" target="_blank" class="instagram-btn">
           <i class="fab fa-instagram"></i> Visit our Instagram
         </a>
         <p class="instagram-note">Follow us for more updates and event photos</p>
@@ -135,7 +121,7 @@
   </div>
 
   <footer>
-    &copy; Copyright 2025 Paletto Event | Powered by Paletto Event Team
+    &copy; Copyright 2026 Paletto Event | Powered by Paletto Event Team
   </footer>
 
   <script>
@@ -190,7 +176,6 @@
       const modal = document.getElementById('imageModal');
       const closeModal = document.getElementById('closeModal');
       const modalImage = document.getElementById('modalImage');
-      const galleryImages = document.querySelectorAll('.gallery-grid img');
       
       let currentSlide = 0;
       let autoPlayInterval;
@@ -309,8 +294,8 @@
           }
         });
         
-        // إضافة إمكانية التكبير للصور في المعرض الأصلي
-        galleryImages.forEach((img, index) => {
+        // إضافة إمكانية التكبير للصور المصغرة
+        document.querySelectorAll('.thumbnail img').forEach((img, index) => {
           img.addEventListener('click', () => {
             modalImage.src = images[index].src;
             modal.style.display = 'flex';
