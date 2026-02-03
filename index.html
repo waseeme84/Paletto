@@ -15,12 +15,14 @@
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
   <title>Paletto | Event Management</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   
  <nav class="navbar">
   <div class="nav-left">
-<img src="image/logo.svg" alt="paletto logo" class="logo"></div>
+    <img src="image/logo.svg" alt="paletto logo" class="logo">
+  </div>
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <ul class="nav-right" id="navMenu">
       <li><a href="#WhoWeAre?">Who We Are?</a></li>
@@ -39,9 +41,8 @@
   <section id="WhoWeAre?">
     <h2>Who We Are ?</h2>
     <div class="about">
-    <p>Because events should have an impact and add color and joy to people's lives, our small team specializes in organizing various events with professionalism.<br>12 different colors work perfectly and exceptionally to create your special special event.<br>Don't hesitate to contact us so we can design an unforgettable event together.
-</p>
-</div>
+      <p>Because events should have an impact and add color and joy to people's lives, our small team specializes in organizing various events with professionalism.<br>12 different colors work perfectly and exceptionally to create your special special event.<br>Don't hesitate to contact us so we can design an unforgettable event together.</p>
+    </div>
   </section>
 
   <section id="OurServices">
@@ -60,7 +61,39 @@
 
   <section id="gallery">
     <h2>Gallery</h2>
-   <div class="gallery">
+    
+    <!-- كروسال الصور -->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- سيتم إضافة الشرائح بواسطة JavaScript -->
+      </div>
+      
+      <button class="carousel-control prev" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-control next" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      
+      <button class="carousel-zoom-btn" id="zoomBtn">
+        <i class="fas fa-search-plus"></i>
+      </button>
+    </div>
+    
+    <div class="carousel-indicators" id="indicators">
+      <!-- سيتم إضافة المؤشرات بواسطة JavaScript -->
+    </div>
+    
+    <!-- معرض الصور المصغرة -->
+    <div class="thumbnails-container">
+      <h3>All Photos</h3>
+      <div class="thumbnails" id="thumbnails">
+        <!-- سيتم إضافة الصور المصغرة بواسطة JavaScript -->
+      </div>
+    </div>
+    
+    <!-- معرض الصور الأصلي -->
+    <div class="gallery-grid">
       <img src="image/bookfair (1).jpg" alt="Bookfair" />
       <img src="image/bookfair (2).jpg" alt="Bookfair" />
       <img src="image/bookfair (3).jpg" alt="Bookfair" />
@@ -70,27 +103,43 @@
       <img src="image/bookfair (7).jpg" alt="Bookfair" />
       <img src="image/bookfair (8).jpg" alt="Bookfair" />
       <img src="image/bookfair (9).jpg" alt="Bookfair" />
-        <p>Bookfair</p>
-   </div>
+      <p class="gallery-caption">Bookfair</p>
+    </div>
   </section>
 
   <section id="ContactUs">
     <h2>Contact Us</h2>
     <div class="contact-info">
-      <p>Email: paletto.event@gmail.com</p>
-      <p>WhatsApp: +963 983 720 342</p>
-      <p>Phone:    +963 958 709 669</p>
-      <a href="https://www.instagram.com/waseem_esmail/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-       </div>
+      <p><i class="fas fa-envelope"></i> Email: paletto.event@gmail.com</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: +963 983 720 342</p>
+      <p><i class="fas fa-phone"></i> Phone: +963 958 709 669</p>
+      
+      <!-- زر زيارة الإنستغرام -->
+      <div class="instagram-link">
+        <a href="https://www.instagram.com/waseem_esmail/" target="_blank" class="instagram-btn">
+          <i class="fab fa-instagram"></i> Visit our Instagram
+        </a>
+        <p class="instagram-note">Follow us for more updates and event photos</p>
+      </div>
+    </div>
   </section>
 
   <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+  <!-- نافذة التكبير -->
+  <div class="modal" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <div class="modal-content">
+      <img src="" alt="Zoomed Image" id="modalImage">
+    </div>
+  </div>
 
   <footer>
     &copy; Copyright 2025 Paletto Event | Powered by Paletto Event Team
   </footer>
 
   <script>
+    // تأثير الكتابة
     const text = "When Every Detail Pops";
     let i = 0;
     function typeEffect() {
@@ -100,20 +149,187 @@
         setTimeout(typeEffect, 80);
       }
     }
-    window.onload = typeEffect;
-
+    
+    // زر العودة للأعلى
     let topButton = document.getElementById("topBtn");
     window.onscroll = () => {
       topButton.style.display = window.scrollY > 300 ? "block" : "none";
     };
+    
     function topFunction() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script>
-  <script>
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('show');
-  }
+    
+    // القائمة المتنقلة
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+    
+    // كروسال الصور - الكود
+    document.addEventListener('DOMContentLoaded', function() {
+      // بيانات الصور
+      const images = [
+        { src: "image/bookfair (1).jpg", title: "Bookfair Event", description: "Opening ceremony of the book fair" },
+        { src: "image/bookfair (2).jpg", title: "Book Exhibition", description: "Visitors exploring book stalls" },
+        { src: "image/bookfair (3).jpg", title: "Cultural Event", description: "Author signing session" },
+        { src: "image/bookfair (4).jpg", title: "Book Launch", description: "New book releases showcase" },
+        { src: "image/bookfair (5).jpg", title: "Reading Area", description: "Comfortable reading space for visitors" },
+        { src: "image/bookfair (6).jpg", title: "Children's Corner", description: "Kids enjoying interactive activities" },
+        { src: "image/bookfair (7).jpg", title: "Art Exhibition", description: "Artwork inspired by literature" },
+        { src: "image/bookfair (8).jpg", title: "Discussion Panel", description: "Expert panel on contemporary literature" },
+        { src: "image/bookfair (9).jpg", title: "Closing Ceremony", description: "Award distribution and closing remarks" }
+      ];
+      
+      // عناصر DOM
+      const carousel = document.getElementById('carousel');
+      const indicators = document.getElementById('indicators');
+      const thumbnails = document.getElementById('thumbnails');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const zoomBtn = document.getElementById('zoomBtn');
+      const modal = document.getElementById('imageModal');
+      const closeModal = document.getElementById('closeModal');
+      const modalImage = document.getElementById('modalImage');
+      const galleryImages = document.querySelectorAll('.gallery-grid img');
+      
+      let currentSlide = 0;
+      let autoPlayInterval;
+      
+      // إنشاء شرائح الكروسال
+      function createSlides() {
+        carousel.innerHTML = '';
+        indicators.innerHTML = '';
+        thumbnails.innerHTML = '';
+        
+        images.forEach((image, index) => {
+          // إنشاء الشرائح
+          const slide = document.createElement('div');
+          slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+          slide.innerHTML = `
+            <img src="${image.src}" alt="${image.title}">
+            <div class="slide-caption">
+              <h3>${image.title}</h3>
+              <p>${image.description}</p>
+            </div>
+          `;
+          carousel.appendChild(slide);
+          
+          // إنشاء مؤشرات
+          const indicator = document.createElement('div');
+          indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+          indicator.dataset.index = index;
+          indicator.addEventListener('click', () => goToSlide(index));
+          indicators.appendChild(indicator);
+          
+          // إنشاء الصور المصغرة
+          const thumbnail = document.createElement('div');
+          thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+          thumbnail.dataset.index = index;
+          thumbnail.innerHTML = `<img src="${image.src}" alt="${image.title}">`;
+          thumbnail.addEventListener('click', () => goToSlide(index));
+          thumbnails.appendChild(thumbnail);
+        });
+      }
+      
+      // الانتقال إلى شريحة محددة
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateCarousel();
+        stopAutoPlay();
+      }
+      
+      // تحديث الكروسال
+      function updateCarousel() {
+        // تحديث موضع الكروسال
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // تحديث المؤشرات
+        document.querySelectorAll('.indicator').forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentSlide);
+        });
+        
+        // تحديث الصور المصغرة
+        document.querySelectorAll('.thumbnail').forEach((thumbnail, index) => {
+          thumbnail.classList.toggle('active', index === currentSlide);
+        });
+      }
+      
+      // الشريحة التالية
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % images.length;
+        updateCarousel();
+      }
+      
+      // الشريحة السابقة
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + images.length) % images.length;
+        updateCarousel();
+      }
+      
+      // تكبير الصورة الحالية
+      function zoomImage() {
+        modalImage.src = images[currentSlide].src;
+        modal.style.display = 'flex';
+      }
+      
+      // بدء التشغيل التلقائي
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 4000);
+      }
+      
+      // إيقاف التشغيل التلقائي
+      function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+      }
+      
+      // تهيئة الكروسال
+      function initCarousel() {
+        createSlides();
+        
+        // إضافة مستمعي الأحداث
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          stopAutoPlay();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          stopAutoPlay();
+        });
+        
+        zoomBtn.addEventListener('click', zoomImage);
+        
+        closeModal.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+        
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+        
+        // إضافة إمكانية التكبير للصور في المعرض الأصلي
+        galleryImages.forEach((img, index) => {
+          img.addEventListener('click', () => {
+            modalImage.src = images[index].src;
+            modal.style.display = 'flex';
+          });
+        });
+        
+        // بدء التشغيل التلقائي
+        startAutoPlay();
+        
+        // إيقاف التشغيل التلقائي عند التفاعل مع الكروسال
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+      }
+      
+      // تشغيل تهيئة الكروسال
+      initCarousel();
+    });
+    
+    window.onload = typeEffect;
   </script>
 </body>
 </html>
