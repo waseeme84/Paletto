@@ -14,28 +14,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
   <title>Paletto | Event Management</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* أنماط إضافية لتصحيح المشاكل */
-    .nav-left img.logo {
-      height: 45px !important;
-      width: auto !important;
-      max-height: 45px !important;
+    /* أنماط سريعة للتصحيح */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     
-    .service-image img {
-      width: 100% !important;
-      height: 250px !important;
-      object-fit: cover !important;
-    }
-    
-    .carousel-slide img {
-      width: 100% !important;
-      height: 400px !important;
-      object-fit: cover !important;
+    .nav-left .logo {
+      height: 45px;
+      width: auto;
     }
   </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   
@@ -161,7 +154,7 @@
   </footer>
 
   <script>
-    // تأثير الكتابة
+    // تأثير الكتابة - تمت إضافته مرة أخرى
     const text = "When Every Detail Pops";
     let i = 0;
     function typeEffect() {
@@ -187,9 +180,9 @@
       document.getElementById('navMenu').classList.toggle('show');
     }
     
-    // كروسال الصور - الكود
+    // كروسال الصور - الكود المصحح
     document.addEventListener('DOMContentLoaded', function() {
-      // بيانات الصور مع العبارات الجديدة
+      // بيانات الصور مع العبارات الجديدة - تأكد من أن المسارات صحيحة
       const images = [
         { src: "image/bookfair (1).jpg", title: "Opening Ceremony", description: "Grand inauguration of the literary event" },
         { src: "image/bookfair (2).jpg", title: "IIS Books", description: "Books from the Institute of Ismaili Studies" },
@@ -226,7 +219,7 @@
           const slide = document.createElement('div');
           slide.className = 'carousel-slide';
           slide.innerHTML = `
-            <img src="${image.src}" alt="${image.title}">
+            <img src="${image.src}" alt="${image.title}" loading="lazy">
             <div class="slide-caption">
               <h3>${image.title}</h3>
               <p>${image.description}</p>
@@ -253,7 +246,9 @@
       // تحديث الكروسال
       function updateCarousel() {
         // تحديث موضع الكروسال
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        if (carousel) {
+          carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
         
         // تحديث المؤشرات
         document.querySelectorAll('.indicator').forEach((indicator, index) => {
@@ -275,8 +270,10 @@
       
       // تكبير الصورة الحالية
       function zoomImage() {
-        modalImage.src = images[currentSlide].src;
-        modal.style.display = 'flex';
+        if (images[currentSlide]) {
+          modalImage.src = images[currentSlide].src;
+          modal.style.display = 'flex';
+        }
       }
       
       // بدء التشغيل التلقائي
@@ -286,7 +283,9 @@
       
       // إيقاف التشغيل التلقائي
       function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+        }
       }
       
       // تهيئة الكروسال
@@ -294,41 +293,54 @@
         createSlides();
         
         // إضافة مستمعي الأحداث
-        prevBtn.addEventListener('click', () => {
-          prevSlide();
-          stopAutoPlay();
-        });
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoPlay();
+          });
+        }
         
-        nextBtn.addEventListener('click', () => {
-          nextSlide();
-          stopAutoPlay();
-        });
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoPlay();
+          });
+        }
         
-        zoomBtn.addEventListener('click', zoomImage);
+        if (zoomBtn) {
+          zoomBtn.addEventListener('click', zoomImage);
+        }
         
-        closeModal.addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-        
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
+        if (closeModal) {
+          closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
-          }
-        });
+          });
+        }
+        
+        if (modal) {
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              modal.style.display = 'none';
+            }
+          });
+        }
         
         // بدء التشغيل التلقائي
         startAutoPlay();
         
         // إيقاف التشغيل التلقائي عند التفاعل مع الكروسال
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
+        if (carousel) {
+          carousel.addEventListener('mouseenter', stopAutoPlay);
+          carousel.addEventListener('mouseleave', startAutoPlay);
+        }
       }
       
       // تشغيل تهيئة الكروسال
       initCarousel();
+      
+      // بدء تأثير الكتابة
+      typeEffect();
     });
-    
-    window.onload = typeEffect;
   </script>
 </body>
 </html>
