@@ -14,19 +14,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
   <title>Paletto | Event Management</title>
-  <style>
-    /* أنماط سريعة للتصحيح */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    .nav-left .logo {
-      height: 45px;
-      width: auto;
-    }
-  </style>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -116,9 +103,16 @@
       </button>
     </div>
     
-    <!-- المؤشرات فقط (الدوائر) -->
     <div class="carousel-indicators" id="indicators">
       <!-- سيتم إضافة المؤشرات بواسطة JavaScript -->
+    </div>
+    
+    <!-- معرض الصور المصغرة -->
+    <div class="thumbnails-container">
+      <h3>All Photos</h3>
+      <div class="thumbnails" id="thumbnails">
+        <!-- سيتم إضافة الصور المصغرة بواسطة JavaScript -->
+      </div>
     </div>
   </section>
 
@@ -154,7 +148,7 @@
   </footer>
 
   <script>
-    // تأثير الكتابة - تمت إضافته مرة أخرى
+    // تأثير الكتابة
     const text = "When Every Detail Pops";
     let i = 0;
     function typeEffect() {
@@ -180,9 +174,9 @@
       document.getElementById('navMenu').classList.toggle('show');
     }
     
-    // كروسال الصور - الكود المصحح
+    // كروسال الصور - الكود
     document.addEventListener('DOMContentLoaded', function() {
-      // بيانات الصور مع العبارات الجديدة - تأكد من أن المسارات صحيحة
+      // بيانات الصور
       const images = [
         { src: "image/bookfair (1).jpg", title: "Opening Ceremony", description: "Grand inauguration of the literary event" },
         { src: "image/bookfair (2).jpg", title: "IIS Books", description: "Books from the Institute of Ismaili Studies" },
@@ -193,12 +187,13 @@
         { src: "image/bookfair (7).jpg", title: "Gift Collections", description: "Inspirational gifts and keepsakes" },
         { src: "image/bookfair (8).jpg", title: "Memory Photo Booth", description: "Capturing exhibition moments digitally" },
         { src: "image/bookfair (9).jpg", title: "Authors' Bookmarks", description: "Local literary wisdom preserved" },
-        { src: "image/bookfair (10).jpg", title: "Photo Frame Station", description: "Personalized exhibition souvenirs" },}
+        { src: "image/bookfair (10).jpg", title: "Photo Frame Station", description: "Personalized exhibition souvenirs" },
       ];
       
       // عناصر DOM
       const carousel = document.getElementById('carousel');
       const indicators = document.getElementById('indicators');
+      const thumbnails = document.getElementById('thumbnails');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
       const zoomBtn = document.getElementById('zoomBtn');
@@ -213,13 +208,14 @@
       function createSlides() {
         carousel.innerHTML = '';
         indicators.innerHTML = '';
+        thumbnails.innerHTML = '';
         
         images.forEach((image, index) => {
           // إنشاء الشرائح
           const slide = document.createElement('div');
-          slide.className = 'carousel-slide';
+          slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
           slide.innerHTML = `
-            <img src="${image.src}" alt="${image.title}" loading="lazy">
+            <img src="${image.src}" alt="${image.title}">
             <div class="slide-caption">
               <h3>${image.title}</h3>
               <p>${image.description}</p>
@@ -233,6 +229,14 @@
           indicator.dataset.index = index;
           indicator.addEventListener('click', () => goToSlide(index));
           indicators.appendChild(indicator);
+          
+          // إنشاء الصور المصغرة
+          const thumbnail = document.createElement('div');
+          thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+          thumbnail.dataset.index = index;
+          thumbnail.innerHTML = `<img src="${image.src}" alt="${image.title}">`;
+          thumbnail.addEventListener('click', () => goToSlide(index));
+          thumbnails.appendChild(thumbnail);
         });
       }
       
@@ -246,13 +250,16 @@
       // تحديث الكروسال
       function updateCarousel() {
         // تحديث موضع الكروسال
-        if (carousel) {
-          carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
         
         // تحديث المؤشرات
         document.querySelectorAll('.indicator').forEach((indicator, index) => {
           indicator.classList.toggle('active', index === currentSlide);
+        });
+        
+        // تحديث الصور المصغرة
+        document.querySelectorAll('.thumbnail').forEach((thumbnail, index) => {
+          thumbnail.classList.toggle('active', index === currentSlide);
         });
       }
       
@@ -270,10 +277,8 @@
       
       // تكبير الصورة الحالية
       function zoomImage() {
-        if (images[currentSlide]) {
-          modalImage.src = images[currentSlide].src;
-          modal.style.display = 'flex';
-        }
+        modalImage.src = images[currentSlide].src;
+        modal.style.display = 'flex';
       }
       
       // بدء التشغيل التلقائي
@@ -283,9 +288,7 @@
       
       // إيقاف التشغيل التلقائي
       function stopAutoPlay() {
-        if (autoPlayInterval) {
-          clearInterval(autoPlayInterval);
-        }
+        clearInterval(autoPlayInterval);
       }
       
       // تهيئة الكروسال
@@ -293,54 +296,49 @@
         createSlides();
         
         // إضافة مستمعي الأحداث
-        if (prevBtn) {
-          prevBtn.addEventListener('click', () => {
-            prevSlide();
-            stopAutoPlay();
-          });
-        }
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          stopAutoPlay();
+        });
         
-        if (nextBtn) {
-          nextBtn.addEventListener('click', () => {
-            nextSlide();
-            stopAutoPlay();
-          });
-        }
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          stopAutoPlay();
+        });
         
-        if (zoomBtn) {
-          zoomBtn.addEventListener('click', zoomImage);
-        }
+        zoomBtn.addEventListener('click', zoomImage);
         
-        if (closeModal) {
-          closeModal.addEventListener('click', () => {
+        closeModal.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+        
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
             modal.style.display = 'none';
-          });
-        }
+          }
+        });
         
-        if (modal) {
-          modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-              modal.style.display = 'none';
-            }
+        // إضافة إمكانية التكبير للصور المصغرة
+        document.querySelectorAll('.thumbnail img').forEach((img, index) => {
+          img.addEventListener('click', () => {
+            modalImage.src = images[index].src;
+            modal.style.display = 'flex';
           });
-        }
+        });
         
         // بدء التشغيل التلقائي
         startAutoPlay();
         
         // إيقاف التشغيل التلقائي عند التفاعل مع الكروسال
-        if (carousel) {
-          carousel.addEventListener('mouseenter', stopAutoPlay);
-          carousel.addEventListener('mouseleave', startAutoPlay);
-        }
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
       }
       
       // تشغيل تهيئة الكروسال
       initCarousel();
-      
-      // بدء تأثير الكتابة
-      typeEffect();
     });
+    
+    window.onload = typeEffect;
   </script>
 </body>
 </html>
