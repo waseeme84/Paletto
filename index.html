@@ -16,6 +16,26 @@
   <title>Paletto | Event Management</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* أنماط إضافية لتصحيح المشاكل */
+    .nav-left img.logo {
+      height: 45px !important;
+      width: auto !important;
+      max-height: 45px !important;
+    }
+    
+    .service-image img {
+      width: 100% !important;
+      height: 250px !important;
+      object-fit: cover !important;
+    }
+    
+    .carousel-slide img {
+      width: 100% !important;
+      height: 400px !important;
+      object-fit: cover !important;
+    }
+  </style>
 </head>
 <body>
   
@@ -180,7 +200,7 @@
         { src: "image/bookfair (7).jpg", title: "Gift Collections", description: "Inspirational gifts and keepsakes" },
         { src: "image/bookfair (8).jpg", title: "Memory Photo Booth", description: "Capturing exhibition moments digitally" },
         { src: "image/bookfair (9).jpg", title: "Authors' Bookmarks", description: "Local literary wisdom preserved" },
-        { src: "image/bookfair (10).jpg", title: "Photo Frame Station", description: "Personalized exhibition souvenirs" },
+        { src: "image/bookfair (10).jpg", title: "Photo Frame Station", description: "Personalized exhibition souvenirs" },}
       ];
       
       // عناصر DOM
@@ -204,7 +224,7 @@
         images.forEach((image, index) => {
           // إنشاء الشرائح
           const slide = document.createElement('div');
-          slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+          slide.className = 'carousel-slide';
           slide.innerHTML = `
             <img src="${image.src}" alt="${image.title}">
             <div class="slide-caption">
@@ -214,7 +234,7 @@
           `;
           carousel.appendChild(slide);
           
-          // إنشاء مؤشرات فقط (بدون thumbnails)
+          // إنشاء مؤشرات
           const indicator = document.createElement('div');
           indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
           indicator.dataset.index = index;
