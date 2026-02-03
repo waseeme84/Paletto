@@ -1,35 +1,29 @@
-body {
+/* Reset وتصحيح المشاكل */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('https://images.unsplash.com/photo-1630395822970-acd6a691d97e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
   color: #2e2e2e;
-}
-
-.about {
-  width: 60%;
-  margin: 0 auto;
-}
-
-.about p {
-  text-align: justify;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
-p {
-  text-align: center;
-}
-
-/* إصلاح شريط التنقل */
+/* شريط التنقل */
 .navbar {
   background-color: rgba(255, 255, 255, 0.98);
-  padding: 0.8rem 2rem;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -39,16 +33,15 @@ p {
 }
 
 .nav-left .logo {
-  height: 50px !important; /* !important للتأكد من تطبيق الحجم */
+  height: 45px;
   width: auto;
-  max-height: 50px;
   display: block;
 }
 
 .nav-right {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -56,154 +49,92 @@ p {
 .nav-right li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
   transition: color 0.3s;
+  padding: 5px 0;
 }
 
 .nav-right li a:hover {
   color: #a259ff;
 }
 
+/* الهيدر */
 header {
   background: linear-gradient(to right, rgba(162, 89, 255, 0.85), rgba(255, 106, 61, 0.85));
   color: white;
-  padding: 3rem 2rem;
+  padding: 60px 20px;
   text-align: center;
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
+  border-radius: 0 0 20px 20px;
   margin-top: 0;
 }
 
 header h1 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 20px 0;
   font-size: 2.8rem;
-  text-align: center;
-}
-
-section {
-  background-color: rgba(255, 255, 255, 0.93);
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.85rem 2rem;
-  background-color: #ff6a3d;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-}
-
-.cta-button:hover {
-  background-color: #e55a30;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
-  margin-top: 3rem;
-}
-
-form {
+  font-weight: 700;
+  min-height: 60px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-input, textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+/* الأقسام */
+section {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-button {
-  background-color: #a259ff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.contact-info {
+h2 {
   text-align: center;
-  margin-top: 1.5rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
   color: #333;
+  font-size: 2.2rem;
+  font-weight: 600;
 }
 
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  z-index: 99;
-  background-color: #ff6a3d;
-  color: white;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
+/* قسم Who We Are */
+.about {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#topBtn:hover {
-  background-color: #e55a30;
-  transform: scale(1.1);
+.about p {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
-/* قسم OurServices المعدل */
+/* قسم OurServices */
 .services-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 30px;
   max-width: 900px;
-  margin: 2rem auto 0;
-  padding: 0;
+  margin: 0 auto;
 }
 
 .service-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .service-image {
-  height: 300px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -219,14 +150,14 @@ button {
 }
 
 .service-content {
-  padding: 2rem;
+  padding: 25px;
   text-align: center;
 }
 
 .service-content h3 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 15px 0;
   color: #333;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   background: linear-gradient(45deg, #a259ff, #ff6a3d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -234,9 +165,10 @@ button {
 
 .service-content p {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  text-align: center;
 }
 
 .service-features {
@@ -245,25 +177,25 @@ button {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
+  gap: 12px;
 }
 
 .service-features li {
-  padding: 0.5rem;
+  padding: 8px;
   color: #555;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 8px;
   font-size: 0.95rem;
 }
 
 .service-features i {
   color: #a259ff;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* أنماط الكروسال */
+/* قسم Gallery والكروسال */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -271,19 +203,20 @@ button {
   margin: 20px auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height: 500px;
+  height: 450px;
 }
 
 .carousel-slide {
   min-width: 100%;
   height: 100%;
   position: relative;
+  flex-shrink: 0;
 }
 
 .carousel-slide img {
@@ -308,12 +241,14 @@ button {
   margin: 0 0 8px 0;
   font-size: 1.5rem;
   color: white;
+  text-align: center;
 }
 
 .slide-caption p {
   margin: 0;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .carousel-control {
@@ -398,97 +333,14 @@ button {
   transform: scale(1.1);
 }
 
-/* معرض الصور المصغرة */
-.thumbnails-container {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.thumbnails-container h3 {
-  margin: 0 0 20px 0;
+/* قسم Contact Us */
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.05rem;
   color: #333;
-  font-size: 1.5rem;
 }
 
-.thumbnails {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 12px;
-}
-
-.thumbnail {
-  height: 90px;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  border: 3px solid transparent;
-}
-
-.thumbnail:hover {
-  opacity: 1;
-  border-color: #a259ff;
-}
-
-.thumbnail.active {
-  opacity: 1;
-  border-color: #ff6a3d;
-  transform: scale(1.05);
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* نافذة التكبير */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 3rem;
-  cursor: pointer;
-  transition: color 0.3s;
-  z-index: 1001;
-}
-
-.close-modal:hover {
-  color: #ff6a3d;
-}
-
-/* تحسينات قسم التواصل */
 .contact-info p {
   display: flex;
   align-items: center;
@@ -496,7 +348,6 @@ button {
   gap: 12px;
   margin: 15px 0;
   text-align: center;
-  font-size: 1.1rem;
 }
 
 .contact-info i {
@@ -522,7 +373,7 @@ button {
   text-decoration: none;
   padding: 14px 30px;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
@@ -539,7 +390,124 @@ button {
   font-style: italic;
 }
 
-/* تنسيقات متجاوبة */
+/* أزرار */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: #ff6a3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #e55a30;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  z-index: 99;
+  background-color: #ff6a3d;
+  color: white;
+  padding: 14px 17px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+#topBtn:hover {
+  background-color: #e55a30;
+  transform: scale(1.1);
+}
+
+/* القائمة المتحركة */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* نافذة التكبير */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2001;
+}
+
+.close-modal:hover {
+  color: #ff6a3d;
+}
+
+/* الفوتر */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+  margin-top: 50px;
+}
+
+/* التجاوب مع الأجهزة المختلفة */
+@media (min-width: 769px) {
+  .services-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .service-card {
+    flex: 1;
+    max-width: 450px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -553,11 +521,12 @@ button {
     top: 100%;
     right: 0;
     left: 0;
-    padding: 1rem;
+    padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 0 0 8px 8px;
-    z-index: 101;
+    border-radius: 0 0 10px 10px;
+    z-index: 1001;
     text-align: center;
+    gap: 15px;
   }
 
   .nav-right.show {
@@ -565,11 +534,11 @@ button {
   }
   
   .nav-left .logo {
-    height: 45px !important;
+    height: 40px;
   }
   
   header {
-    padding: 2rem 1rem;
+    padding: 40px 15px;
   }
   
   header h1 {
@@ -577,25 +546,23 @@ button {
   }
   
   section {
-    padding: 2rem 1rem;
-    margin: 1.5rem auto;
+    padding: 30px 20px;
+    margin: 20px auto;
     max-width: 95%;
   }
   
-  /* تحسينات بطاقات الخدمات */
-  .service-card {
-    max-width: 100%;
+  h2 {
+    font-size: 1.8rem;
   }
   
   .service-image {
-    height: 250px;
+    height: 220px;
   }
   
   .service-features {
     grid-template-columns: 1fr;
   }
   
-  /* تحسينات الكروسال */
   .carousel {
     height: 350px;
   }
@@ -605,77 +572,35 @@ button {
   }
   
   .carousel-control {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
-  
-  .carousel-control.prev {
-    left: 10px;
-  }
-  
-  .carousel-control.next {
-    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
   }
   
   .slide-caption h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .slide-caption p {
     font-size: 0.9rem;
   }
   
-  .thumbnails {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-  }
-  
-  .thumbnail {
-    height: 80px;
-  }
-  
   .about {
-    width: 90%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .services-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 95%;
   }
   
-  .service-card {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-  }
-}
-
-@media (min-width: 1025px) {
-  .services-container {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2.5rem;
-  }
-  
-  .service-card {
-    flex: 1;
-    max-width: 450px;
+  .about p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .carousel {
-    height: 280px;
+    height: 300px;
   }
   
-  .thumbnails {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  }
-  
-  .thumbnail {
-    height: 70px;
+  .service-image {
+    height: 200px;
   }
   
   .instagram-btn {
@@ -687,7 +612,7 @@ button {
     font-size: 1.8rem;
   }
   
-  .service-image {
-    height: 200px;
+  .service-content h3 {
+    font-size: 1.5rem;
   }
 }
